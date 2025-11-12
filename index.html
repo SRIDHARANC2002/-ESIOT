@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Don't Modify Anything</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+      margin: 0;
+      padding: 0;
+      color: #e0e0e0;
+      min-height: 100vh;
+    }
+    header {
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+      color: #ffffff;
+      padding: 25px 20px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      border-bottom: 2px solid #ff6b35;
+      box-shadow: 0 4px 20px rgba(255, 107, 53, 0.15);
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: rgba(26, 26, 26, 0.95);
+      border-radius: 15px;
+      padding: 30px 40px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 107, 53, 0.1);
+    }
+    .experiment {
+      background: linear-gradient(135deg, #1e1e1e 0%, #252525 100%);
+      border: 1px solid rgba(255, 107, 53, 0.2);
+      border-radius: 12px;
+      padding: 20px 25px;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .experiment::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 4px;
+      background: linear-gradient(180deg, #ff6b35 0%, #f7931e 100%);
+      transform: scaleY(0);
+      transition: transform 0.3s ease;
+    }
+    .experiment:hover::before {
+      transform: scaleY(1);
+    }
+    .experiment:hover {
+      transform: translateX(8px);
+      box-shadow: 0 6px 24px rgba(255, 107, 53, 0.2);
+      border-color: rgba(255, 107, 53, 0.4);
+    }
+    .experiment h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #ffffff;
+      flex: 1;
+      font-weight: 500;
+    }
+    .btn {
+      padding: 10px 24px;
+      border-radius: 8px;
+      border: 2px solid #ff6b35;
+      cursor: pointer;
+      font-weight: 600;
+      text-decoration: none;
+      text-align: center;
+      color: #ff6b35;
+      background: transparent;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, #ff6b35, #f7931e);
+      transition: left 0.3s ease;
+      z-index: -1;
+    }
+    .btn:hover::before {
+      left: 0;
+    }
+    .btn:hover {
+      color: #ffffff;
+      border-color: #f7931e;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+    }
+    .bottom-actions {
+      display: flex;
+      justify-content: center;
+      margin: 40px auto 10px;
+    }
+    .bottom-actions .btn {
+      padding: 14px 32px;
+      font-size: 16px;
+      background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+      color: #ffffff;
+      border: none;
+      box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
+    }
+    .bottom-actions .btn::before {
+      background: linear-gradient(135deg, #f7931e 0%, #ff6b35 100%);
+    }
+    .bottom-actions .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 25px rgba(255, 107, 53, 0.4);
+    }
+    footer {
+      text-align: center;
+      color: #888888;
+      padding: 25px 0;
+      font-size: 14px;
+      border-top: 1px solid rgba(255, 107, 53, 0.2);
+      background: rgba(17, 17, 17, 0.8);
+      backdrop-filter: blur(10px);
+    }
+  </style>
+</head>
+<body>
+
+  <header>Don't Modify Anything</header>
+
+  <div class="container">
+    <div class="experiment">
+      <h3>1. Interfacing Arduino with Pot and Servo Motor</h3>
+      <a href="https://www.tinkercad.com/things/5eYt6veiJFJ/editel" target="_blank" rel="noopener" class="btn">Tinkercad</a>
+    </div>
+
+    <div class="experiment">
+      <h3>2. Interfacing Arduino with Stepper Motor</h3>
+      <a href="https://www.tinkercad.com/things/9tNXbZE4qnD/editel" target="_blank" rel="noopener" class="btn">Tinkercad</a>
+    </div>
+
+    <div class="experiment">
+      <h3>3. Interfacing Arduino with Analog/Digital Sensors</h3>
+      <a href="https://www.tinkercad.com/things/jT3Yfg8DiKh/editel" target="_blank" rel="noopener" class="btn">Tinkercad</a>
+    </div>
+
+    <div class="experiment">
+      <h3>4. Interfacing LED/Buzzer with Arduino</h3>
+      <a href="https://www.tinkercad.com/things/aP1M5qRgTRV/editel" target="_blank" rel="noopener" class="btn">Tinkercad</a>
+    </div>
+
+    <div class="experiment">
+      <h3>5. Interfacing Digital Sensor PIR with Arduino</h3>
+      <a href="https://www.tinkercad.com/things/1PwkzZxtfBL/editel" target="_blank" rel="noopener" class="btn">Tinkercad</a>
+    </div>
+
+    <div class="experiment">
+      <h3>6. Interfacing DHT22 Sensor with Arduino</h3>
+      <a href="https://www.tinkercad.com/things/dJu7qZCe6st/editel" target="_blank" rel="noopener" class="btn">Tinkercad</a>
+    </div>
+
+    <div class="experiment">
+      <h3>7. Interfacing Motor Using Relay with Raspberry Pi/Arduino Based on Temperature</h3>
+      <a href="https://www.tinkercad.com/things/fiYhxK4PA09/editel" target="_blank" rel="noopener" class="btn">Tinkercad</a>
+    </div>
+
+    <div class="experiment">
+      <h3>8. Interfacing LCD with Raspberry Pi to Display Temperature and Humidity</h3>
+      <a href="https://www.tinkercad.com/things/8SAJdHRReEH/editel" target="_blank" rel="noopener" class="btn">Tinkercad</a>
+    </div>
+
+    <div class="experiment">
+      <h3>9. Interfacing Flame/Smoke Sensor with Arduino to Display Alert Message</h3>
+      <a href="https://www.tinkercad.com/things/7bVg9mT2hPy/editel" target="_blank" rel="noopener" class="btn">Tinkercad</a>
+    </div>
+
+    <div class="experiment">
+      <h3>10. Case Study: Digital Range Finder using Arduino</h3>
+      <a href="https://www.tinkercad.com/things/ldmiGf62IPt/editel" target="_blank" rel="noopener" class="btn">Tinkercad</a>
+    </div>
+
+    <!-- Bottom PDF button -->
+    <div class="bottom-actions">
+      <a
+        href="https://drive.google.com/file/d/1gg5xCM-JfUds9BeUE65aUh_TFoEXdm9T/view?usp=sharing"
+        target="_blank"
+        rel="noopener"
+        class="btn"
+      >Open Experiment PDF</a>
+    </div>
+  </div>
+
+  <footer>© 2025 • Arduino & Raspberry Pi Lab Experiments</footer>
+
+</body>
+</html>
